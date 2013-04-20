@@ -74,8 +74,9 @@
 }
 
 .font-green {
-	color:#b2ce56;	
+	color:#638b58;	
 }
+
 
 .font-yellow {
 	color:#f2c133;
@@ -165,4 +166,31 @@ footer #footer-inner button:hover{
             background: linear-gradient(top, #67af12,#4f930e);
 			opacity:1;
           }
-		  
+
+/* Block About Section*/
+
+.blockaboutus {
+  padding: 40px 20px 50px 40px;
+  position: relative;
+  background: url(../img/bedge_grunge.png) repeat; 
+  background-position: center center;
+}
+
+/* Title Header About Section*/
+
+#workingtext {
+  font-family: 'Passion One', cursive;
+  color: #323232;
+  font-size: 4.50em;
+  font-weight:normal;
+  padding: 20px 30px 20px 30px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+  text-transform: uppercase;
+  
+
+}
+
+
