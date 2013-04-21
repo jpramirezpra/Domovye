@@ -6,7 +6,8 @@ body{
 .blockhome {
 	padding: 0 0 50px 0;
 	position: relative;
-	background: url(../img/extra_clean_paper.png) repeat; 
+	background: url(../img/bg.jpeg);
+  background-size: cover; 
 	background-position: center center;
 }
 
@@ -225,6 +226,12 @@ footer #footer-inner button:hover{
     -ms-border-radius: 10px;
   padding:10px;
 }
+
+.header-block{
+  background-color:rgba(200,200,200,0.7);
+  padding-bottom: 40px;
+}
+
 
 /* Title Header About Section*/
 
