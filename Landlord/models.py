@@ -1,11 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
-class Landlord(User):
+
+class Landlord(models.Model):
+	user = models.OneToOneField(User)
 	phonenumber = models.CharField(max_length=11)
 	stripe_info = models.CharField(max_length=11)
 
 	def __unicode__(self):
-		return "Lanlord: "+self.username
+		return "Landlord: %s"%self.user.username
 
 class Property(models.Model):
 	STATES_LIST = (
@@ -73,7 +75,8 @@ class Property(models.Model):
 	class Meta:
 		verbose_name_plural = "properties"
 
-class Tenant(User):
+class Tenant(models.Model):
+	user = models.OneToOneField(User)
 	phonenumber = models.CharField(max_length=11)
 	stripe_info = models.CharField(max_length=11)
 	tenant_property = models.ForeignKey(Property)
@@ -83,7 +86,7 @@ class Tenant(User):
 
 
 	def __unicode__(self):
-		return "Tenant: "+self.username
+		return "Tenant: %s "%self.user.username
 
 
 class Lease(models.Model):
@@ -111,4 +114,11 @@ class Lease(models.Model):
 		return self.lease_id
 
 
-
+class Expense(models.Model):
+	EXPENSE_TYPE = (
+		('Ren', 'renovation'),
+		('Rep', 'repair'),
+		)
+	type_expense = models.CharField(max_length=10, choices=EXPENSE_TYPE)
+	contractor = models.BooleanField()
+	amount = models.DecimalField(max_digits=250, decimal_places=2)
