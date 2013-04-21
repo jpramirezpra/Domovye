@@ -1,3 +1,8 @@
+body{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .blockhome {
 	padding: 0 0 50px 0;
 	position: relative;
@@ -19,10 +24,6 @@
 	display:block; 
 }
 
-.logo span { 
-	position: absolute; 
-	top:-5000px; }
-
 
 
 /* Container Text */
@@ -38,7 +39,7 @@
 	font-family: 'Passion One', cursive;
 	color: #323232;
 	font-size: 4.50em;
-	padding: 20px 20px 0px 20px;
+	padding: 20px 0 0 0;
 	text-align: center;
 	list-style-type: none;
 	text-transform: uppercase;
@@ -223,7 +224,6 @@ footer #footer-inner button:hover{
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
   padding:10px;
-  height: 350px;
 }
 
 /* Title Header About Section*/
@@ -233,7 +233,7 @@ footer #footer-inner button:hover{
   color: #323232;
   font-size: 4.50em;
   font-weight:normal;
-  padding: 20px 30px 20px 30px;
+  padding: 20px 0px 20px 0px;
   height: 100%;
   margin: 0 auto;
   text-align: center;
@@ -265,5 +265,4 @@ footer #footer-last p{
   padding: 0px 7px 0px 7px;
   list-style-type: none;
   font-weight:400;
-  line-height:10px;
 }
