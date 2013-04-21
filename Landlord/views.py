@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
+from Landlord.models import *
 
 def index(request):
 	return HttpResponse('This is the Index, Include the Log In and Sign Up')
@@ -13,8 +14,6 @@ def myLogin(request):
 	username = request.POST['username']
 	password = request.POST['password']
 	user = autheticate(username=username, password=password)
-	
-
 
 
 
