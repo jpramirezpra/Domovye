@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>Tuts+ News </title>
+	<link rel='stylesheet' type="text/css" href="{% static "css/master.css" %}">
+</head>
+<body>
+<div id="content">
+	<div id="header">
+		<div id="site-logo">N</div>
+		<div id="site-title">News</div>
+		{% if user.is_authenticated %}
+			<div >{{ user.username }} |<a href="/story/">Submit</a> | <a href="/logout/">Logout</a></div>
+		{% else %}
+			<div id="user-info"><a href="/login/">login</a></div>	
+		{% endif %}
+	</div> 
+{% block content%}
+
+Hello form base
+
+{%endblock content%}
+</div>  
+</body>
+</html>
