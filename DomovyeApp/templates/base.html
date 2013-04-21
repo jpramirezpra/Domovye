@@ -4,14 +4,21 @@
 	<title>Demovye</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
+    <link rel='stylesheet' type="text/css" media="screen" href="{% static "css/bootstrap-responsive.css" %}">
     <link rel='stylesheet' type="text/css" media="screen" href="{% static "css/bootstrap.min.css" %}">
+    <link rel='stylesheet' type="text/css" media="screen" href="{% static "css/style.css" %}">
+    <link href='http://fonts.googleapis.com/css?family=Passion+One:700,900,400' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 {% block content%}
 
 {%endblock content%}
-
+	<footer>
+	  <div id="footer-last">
+	    <p> &copy; 2013 Domovye | <span class="font-grey">Created by Adrik Grigorian and Jose Pablo Ramirez</span></p>
+	  </div>
+	</footer> 
 	<script src="http://code.jquery.com/jquery.js"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
 </body>
