@@ -178,6 +178,24 @@ footer #footer-inner button:hover{
 			opacity:1;
           }
 
+/*Placeholder override*/
+#subemail::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ececec;
+    font-weight: 500;
+}
+#subemail:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ececec;
+    font-weight: 500;
+}
+#subemail::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ececec;
+    font-weight: 500;
+}
+#subemail:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ececec;
+    font-weight: 500;
+}
+
 /* Block About Section*/
 
 .blockaboutus {
