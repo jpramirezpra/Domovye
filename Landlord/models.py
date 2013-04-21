@@ -3,19 +3,26 @@ from django.contrib.auth.models import User
 
 class Landlord(User):
 
-	__unicode__(self):
+
+	def __unicode__(self):
 		return "Lanlord: "+self.username
 
 class Tenant(User):
 
-	__unicode__(self):
+	def __unicode__(self):
 		return "Tenant: "+self.username
 
 class Property(models.Model):
+
 	
-	 __unicode__(self):
-			return self.titile
+	def __unicode__(self):
+			return self.title
 
 	class Meta:
 		verbose_name_plural = "stories"
+
+class Address(models.Model):
+
+	def __unicode__(self):
+		return self.t
 
