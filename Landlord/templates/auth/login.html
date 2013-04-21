@@ -6,22 +6,30 @@
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
-
-<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
-{% csrf_token %}
-<table>
-<p>
-    {{ form.username.label_tag }}
-    {{ form.username }}
-</P>
-<p>
-    {{ form.password.label_tag }}
-    {{ form.password }}
-</p>
-</table>
-
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
+<a class="btn btn-primary" data-toggle="modal" href="#myModal" >Login</a>
+ 
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">x</button>
+    <h3>Login to MyWebsite.com</h3>
+  </div>
+  <div class="modal-body">
+    <form method="post" action="{% url 'django.contrib.auth.views.login' %}" name="login_form">
+    	{% csrf_token %}
+      <p>{{ form.username.label_tag }}
+    {{ form.username }}</p>
+      <p>    {{ form.password.label_tag }}
+    {{ form.password }}</p>
+      <p><button type="submit" class="btn btn-primary" value="login" >Sign in</button>
+      	 <input type="hidden" name="next" value="{{ next }}" />
+        <a href="#">Forgot Password?</a>
+      </p>
+    </form>
+  </div>
+  <div class="modal-footer">
+    New To MyWebsite.com?
+    <a href="#" class="btn btn-primary">Register</a>
+  </div>
+</div>
 
 {% endblock %}
