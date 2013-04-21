@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'DomovyeApp.views.home', name='home'),
    	url(r'', include('Landlord.urls')),
+   	url(r'', include('Tenant.urls')),
    	url(r'^login/$', 'django.contrib.auth.views.login', {'template_name':'auth/login.html'}),
    	url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page':'/'}),
 
