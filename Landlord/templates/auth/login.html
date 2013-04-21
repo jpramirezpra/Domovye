@@ -1,13 +1,55 @@
 {% extends "base.html" %}
 {% load url from future %}
+{% load staticfiles %}
 
 {% block content %}
+
 
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
+
+
+<div class="home blockhome" id="home"> 
+      <!-- Logo -->
+  <div class="container-logo">
+    <div class="row-fluid">
+      <div class="span12">
+      <h1 class="logo"><a href="#home" title=""><img src="{% static "img/logo.png" %}"alt="logo"/></a></h1>
+      </div>
+    </div>
+  </div>
+      <!-- Home Text -->
+      <!-- First Text - Top of Page-->
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="container-first-text">
+
+      <p><span class="font-green">The LandLords Assistant.<br /></span> <span class="dark">The Tenants Friend.</span></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-second-text">
+    <div class="row-fluid">
+      <div class="span12">
+
+  <p>Domovye is here to ease relationships with tentants and landords. We believe in happy homes, happy roomates and happy landlords. Our goal is to ease pains on both sides, by helping tenants easily pay there bills and landlords seemisly manage properties. </p>
+
+      </div>
+    </div>
+  </div>
+
+
 <a class="btn btn-primary" data-toggle="modal" href="#myModal" >Login</a>
  
+</div>
+
+
+
+
+<!-- MODAL SECTION -->
 <div class="modal hide" id="myModal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">x</button>
@@ -16,10 +58,12 @@
   <div class="modal-body">
     <form method="post" action="{% url 'django.contrib.auth.views.login' %}" name="login_form">
     	{% csrf_token %}
-      <p>{{ form.username.label_tag }}
-    {{ form.username }}</p>
-      <p>    {{ form.password.label_tag }}
-    {{ form.password }}</p>
+      <p> {{ form.username.label_tag }}
+          {{ form.username }}
+      </p>
+      <p>  {{ form.password.label_tag }}
+           {{ form.password }}
+      </p>
       <p><button type="submit" class="btn btn-primary" value="login" >Sign in</button>
       	 <input type="hidden" name="next" value="{{ next }}" />
         <a href="#">Forgot Password?</a>
@@ -31,5 +75,6 @@
     <a href="#" class="btn btn-primary">Register</a>
   </div>
 </div>
+<!--- END OF MODAL SECTION -->
 
 {% endblock %}
