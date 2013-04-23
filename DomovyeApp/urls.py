@@ -10,6 +10,7 @@ urlpatterns = patterns('',
    	url(r'', include('Landlord.urls')),
    	url(r'', include('Tenant.urls')),
    	url(r'^login/$', 'django.contrib.auth.views.login', {'template_name':'auth/login.html'}),
+    url(r'^login2/$','django.contrib.auth.views.login', {'template_name':'auth/login2.html'}),
    	url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page':'/'}),
 
     # Uncomment the admin/doc line below to enable admin documentation:
