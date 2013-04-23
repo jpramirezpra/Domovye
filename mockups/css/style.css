@@ -1,0 +1,41 @@
+body{
+  padding-right: 0px;
+  padding-left: 0px;
+
+span.visible-desktop {
+  display: inline !important;
+}
+/*Fix break when using display desktop*/
+@media (min-width: 768px) and (max-width: 979px) {
+  span.hidden-desktop {
+    display: inline !important;
+  }
+  span.visible-desktop {
+    display: none !important;
+  }
+  span.visible-tablet {
+    display: inline !important;
+  }
+}
+
+@media (max-width: 767px) {
+  span.hidden-desktop {
+    display: inline !important;
+  }
+  span.visible-desktop {
+    display: none !important;
+  }
+  span.visible-phone {
+    display: inline !important;
+  }
+}
+
+/*Margin for menu dropdown*/
+
+ul.dropdown-menu li:first-child p {
+  margin-top: 10px;
+  margin-left:10px;
+}
+ul.dropdown-menu li p {
+  margin-left:10px;
+}
